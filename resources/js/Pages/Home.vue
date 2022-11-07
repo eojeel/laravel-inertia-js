@@ -3,7 +3,7 @@ import Nav from '../Components/Nav.vue'
 
 defineProps({
     components: Nav ,
-    framework: Array,
+    frameworks: Array,
 })
 </script>
 

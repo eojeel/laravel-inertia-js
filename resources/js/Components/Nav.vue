@@ -4,6 +4,8 @@
                 <div class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none"><Link href="/">Home</Link></div>
                 <div class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none"><Link href="/users">Users</Link></div>
                 <div class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none"><Link href="/settings">Settings</Link></div>
+                 <div class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none"><Link href="/logout" method="post">Logout</Link></div>
+
         </nav>
     </div>
 </template>
