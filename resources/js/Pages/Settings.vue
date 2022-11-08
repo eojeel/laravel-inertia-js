@@ -1,12 +1,14 @@
-<script setup>
-import Nav from '../Components/Nav.vue'
+<script>
+import Layout from '../Layouts/Layout.vue'
 
-defineProps({
-    components: { Nav },
-})
+export default {
+    components: { Layout },
+};
 </script>
 
+
 <template>
-    <Nav />
+    <Layout>
     <h1>Settings</h1>
+    </Layout>
 </template>

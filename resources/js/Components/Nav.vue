@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-<div class="bg-white grid place-items-center">
+<div class="">
     <nav class="flex flex-col sm:flex-row">
                 <NavLink href="/" :active="$page.component == 'Home'">Home</NavLink>
                 <NavLink href="/users" :active="$page.component == 'Users'">Users</NavLink>
