@@ -7,12 +7,14 @@
         <Nav />
     </header>
 
-    <section class="p-6">
-        <iframe class="mb-10 items-center" width="560" height="315" src="https://www.youtube.com/embed/jAIX7U4EZbI" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+  <section class="p-6">
+    <div class="max-w-3xl mx-auto">
+            <iframe class="mb-10 items-center w-full" height="400" src="https://www.youtube.com/embed/jAIX7U4EZbI" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
 
-        <slot />
+            <slot />
+        </div>
     </section>
 </template>
 
