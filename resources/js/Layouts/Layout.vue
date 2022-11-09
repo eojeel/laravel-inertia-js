@@ -2,7 +2,7 @@
     <header class="flex bg-gray-300 p-3 justify-between">
         <div class="flex items-center">
             <h1 class="font-bold text-lg">My App</h1>
-            <p class="text-sm ml-4">Welcome back {{ username }}!</p>
+            <p class="text-sm ml-4" v-if="username">{{ username }}!</p>
         </div>
         <Nav />
     </header>
@@ -23,7 +23,10 @@ export default {
     components: { Nav },
     computed: {
         username() {
-            return this.$page.props.auth.user.name;
+            if(this.$page.props.auth.user){
+            return `Welcome back ${this.$page.props.auth.user.name}`;
+            }
+            return 'Not Logged In!';
         }
     }
 };

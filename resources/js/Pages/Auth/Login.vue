@@ -1,16 +1,20 @@
-<script setup>
+<script>
 import Checkbox from '@/Components/Checkbox.vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
+import { useForm }  from '@inertiajs/inertia-vue3';
 
-defineProps({
+export default {
+    components: { Checkbox, InputError, InputLabel, PrimaryButton, TextInput, useForm },
+    layout: GuestLayout,
+    props: {
     canResetPassword: Boolean,
     status: String,
-});
+    }
+};
 
 const form = useForm({
     email: '',
