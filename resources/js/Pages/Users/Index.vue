@@ -1,7 +1,7 @@
 <script setup>
 import Pagniation from '../../Components/Pagniation.vue'
 import {ref, watch } from 'vue'
-import { Inertia } from '@inertiajs/inertia';
+import { router } from '@inertiajs/vue3'
 import throttle from 'lodash/throttle'
 
 let props = defineProps({
@@ -13,7 +13,7 @@ let props = defineProps({
 let search = ref(props.filters.search);
 
 watch(search, throttle(function (value) {
-    Inertia.get('/users', { search: value}, {preserveState: true, replace: true });
+    router.get('/users', { search: value}, {preserveState: true, replace: true });
     }, 500));
 </script>
 
