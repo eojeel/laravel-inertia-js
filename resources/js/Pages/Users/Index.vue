@@ -7,7 +7,8 @@ import throttle from 'lodash/throttle'
 let props = defineProps({
     time: String,
     users: Object,
-    filters: Object
+    filters: Object,
+    can: Object
 });
 
 let search = ref(props.filters.search);
@@ -25,7 +26,7 @@ watch(search, throttle(function (value) {
     <div class="flex justify-between mb-6">
         <div class="flex items-center">
             <h1>Users</h1>
-            <Link href="users/create" class="text-blue-500 text-xs ml-2">New User</Link>
+            <Link v-if="can.create" href="users/create" class="text-blue-500 text-xs ml-2">New User</Link>
         </div>
         <input v-model="search" type="text" class="border px-2 rounded-lg" placeholder="search">
     </div>
@@ -41,7 +42,7 @@ watch(search, throttle(function (value) {
                             </div>
                         </td>
                         <td class="p-2 whitespace-nowrap text-right">
-                            <Link href="`/users/${user.id}/edit1" class="text-indigo-600 hover:text-indigo-900">Edit
+                            <Link v-if="user.can.edit" href="`/users/${user.id}/edit1" class="text-indigo-600 hover:text-indigo-900">Edit
                             </Link>
                         </td>
                     </tr>
